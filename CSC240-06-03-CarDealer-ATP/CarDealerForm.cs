@@ -14,5 +14,35 @@ namespace CSC240_06_03_CarDealer_ATP
         {
             InitializeComponent();
         }
+
+        private void UxCompassRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UxCompassRadioButton.Checked)
+            {
+                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep","Compass");
+                carSpecsForm.ShowDialog();
+                UxCompassRadioButton.Checked = false;
+            }
+        }
+
+        private void UxRenegadeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UxRenegadeRadioButton.Checked)
+            {
+                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep", "Renegade");
+                carSpecsForm.ShowDialog();
+                UxRenegadeRadioButton.Checked = false;
+            }
+        }
+
+        private void UxJeepWranglerRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UxJeepWranglerRadioButton.Checked)
+            {
+                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep", "Wrangler");
+                carSpecsForm.ShowDialog();
+                UxJeepWranglerRadioButton.Checked = false;
+            }
+        }
     }
 }
