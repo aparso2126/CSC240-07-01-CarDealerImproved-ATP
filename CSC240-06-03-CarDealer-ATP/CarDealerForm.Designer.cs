@@ -31,7 +31,7 @@
             this.UxJeepModelsLabel = new System.Windows.Forms.Label();
             this.UxJeepWranglerRadioButton = new System.Windows.Forms.RadioButton();
             this.UxCompassRadioButton = new System.Windows.Forms.RadioButton();
-            this.UxPatriotRadioButton = new System.Windows.Forms.RadioButton();
+            this.UxRenegadeRadioButton = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
             // UxJeepModelsLabel
@@ -54,6 +54,7 @@
             this.UxJeepWranglerRadioButton.TabIndex = 4;
             this.UxJeepWranglerRadioButton.Text = "Wrangler";
             this.UxJeepWranglerRadioButton.UseVisualStyleBackColor = true;
+            this.UxJeepWranglerRadioButton.CheckedChanged += new System.EventHandler(this.UxJeepWranglerRadioButton_CheckedChanged);
             // 
             // UxCompassRadioButton
             // 
@@ -67,23 +68,24 @@
             this.UxCompassRadioButton.UseVisualStyleBackColor = true;
             this.UxCompassRadioButton.CheckedChanged += new System.EventHandler(this.UxCompassRadioButton_CheckedChanged);
             // 
-            // UxPatriotRadioButton
+            // UxRenegadeRadioButton
             // 
-            this.UxPatriotRadioButton.AutoSize = true;
-            this.UxPatriotRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UxPatriotRadioButton.Location = new System.Drawing.Point(22, 111);
-            this.UxPatriotRadioButton.Name = "UxPatriotRadioButton";
-            this.UxPatriotRadioButton.Size = new System.Drawing.Size(88, 29);
-            this.UxPatriotRadioButton.TabIndex = 3;
-            this.UxPatriotRadioButton.Text = "Patriot";
-            this.UxPatriotRadioButton.UseVisualStyleBackColor = true;
+            this.UxRenegadeRadioButton.AutoSize = true;
+            this.UxRenegadeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UxRenegadeRadioButton.Location = new System.Drawing.Point(22, 111);
+            this.UxRenegadeRadioButton.Name = "UxRenegadeRadioButton";
+            this.UxRenegadeRadioButton.Size = new System.Drawing.Size(123, 29);
+            this.UxRenegadeRadioButton.TabIndex = 3;
+            this.UxRenegadeRadioButton.Text = "Renegade";
+            this.UxRenegadeRadioButton.UseVisualStyleBackColor = true;
+            this.UxRenegadeRadioButton.CheckedChanged += new System.EventHandler(this.UxRenegadeRadioButton_CheckedChanged);
             // 
             // CarDealerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 242);
-            this.Controls.Add(this.UxPatriotRadioButton);
+            this.Controls.Add(this.UxRenegadeRadioButton);
             this.Controls.Add(this.UxCompassRadioButton);
             this.Controls.Add(this.UxJeepWranglerRadioButton);
             this.Controls.Add(this.UxJeepModelsLabel);
@@ -101,6 +103,6 @@
         private Label UxJeepModelsLabel;
         private RadioButton UxJeepWranglerRadioButton;
         private RadioButton UxCompassRadioButton;
-        private RadioButton UxPatriotRadioButton;
+        private RadioButton UxRenegadeRadioButton;
     }
 }
