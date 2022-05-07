@@ -85,16 +85,16 @@
             this.UxFuelTankTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UxFuelTankTitleLabel.Location = new System.Drawing.Point(12, 257);
             this.UxFuelTankTitleLabel.Name = "UxFuelTankTitleLabel";
-            this.UxFuelTankTitleLabel.Size = new System.Drawing.Size(150, 30);
+            this.UxFuelTankTitleLabel.Size = new System.Drawing.Size(186, 30);
             this.UxFuelTankTitleLabel.TabIndex = 4;
-            this.UxFuelTankTitleLabel.Text = "Fuel Tank:";
+            this.UxFuelTankTitleLabel.Text = "Fuel Capacity:";
             // 
             // UxFuelTypeTitleLabel
             // 
             this.UxFuelTypeTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.UxFuelTypeTitleLabel.Location = new System.Drawing.Point(12, 217);
             this.UxFuelTypeTitleLabel.Name = "UxFuelTypeTitleLabel";
-            this.UxFuelTypeTitleLabel.Size = new System.Drawing.Size(150, 30);
+            this.UxFuelTypeTitleLabel.Size = new System.Drawing.Size(186, 30);
             this.UxFuelTypeTitleLabel.TabIndex = 3;
             this.UxFuelTypeTitleLabel.Text = "Fuel Type:";
             // 
@@ -127,7 +127,7 @@
             this.UxFuelEconLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UxFuelEconLabel.Location = new System.Drawing.Point(204, 297);
             this.UxFuelEconLabel.Name = "UxFuelEconLabel";
-            this.UxFuelEconLabel.Size = new System.Drawing.Size(160, 30);
+            this.UxFuelEconLabel.Size = new System.Drawing.Size(250, 30);
             this.UxFuelEconLabel.TabIndex = 11;
             // 
             // UxFuelTankLabel
@@ -135,7 +135,7 @@
             this.UxFuelTankLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UxFuelTankLabel.Location = new System.Drawing.Point(204, 257);
             this.UxFuelTankLabel.Name = "UxFuelTankLabel";
-            this.UxFuelTankLabel.Size = new System.Drawing.Size(160, 30);
+            this.UxFuelTankLabel.Size = new System.Drawing.Size(250, 30);
             this.UxFuelTankLabel.TabIndex = 10;
             // 
             // UxFuelTypeLabel
@@ -143,7 +143,7 @@
             this.UxFuelTypeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.UxFuelTypeLabel.Location = new System.Drawing.Point(204, 217);
             this.UxFuelTypeLabel.Name = "UxFuelTypeLabel";
-            this.UxFuelTypeLabel.Size = new System.Drawing.Size(160, 30);
+            this.UxFuelTypeLabel.Size = new System.Drawing.Size(250, 30);
             this.UxFuelTypeLabel.TabIndex = 9;
             // 
             // UxModelPictureBox
@@ -176,6 +176,7 @@
             this.Controls.Add(this.UxMakeTitleLabel);
             this.Name = "CarSpecsForm";
             this.Text = "Car Specifications";
+            this.Load += new System.EventHandler(this.CarSpecsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.UxModelPictureBox)).EndInit();
             this.ResumeLayout(false);
 

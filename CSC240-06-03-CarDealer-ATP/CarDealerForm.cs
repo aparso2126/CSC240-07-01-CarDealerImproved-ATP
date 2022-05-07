@@ -14,5 +14,14 @@ namespace CSC240_06_03_CarDealer_ATP
         {
             InitializeComponent();
         }
+
+        private void UxCompassRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (UxCompassRadioButton.Checked)
+            {
+                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep","Compass");
+                carSpecsForm.ShowDialog();
+            }
+        }
     }
 }

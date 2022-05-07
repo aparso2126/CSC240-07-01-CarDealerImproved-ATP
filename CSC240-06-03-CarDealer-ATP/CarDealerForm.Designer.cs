@@ -65,6 +65,7 @@
             this.UxCompassRadioButton.TabIndex = 2;
             this.UxCompassRadioButton.Text = "Compass";
             this.UxCompassRadioButton.UseVisualStyleBackColor = true;
+            this.UxCompassRadioButton.CheckedChanged += new System.EventHandler(this.UxCompassRadioButton_CheckedChanged);
             // 
             // UxPatriotRadioButton
             // 
