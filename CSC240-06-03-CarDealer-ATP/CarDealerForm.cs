@@ -44,5 +44,12 @@ namespace CSC240_07_01_CarDealerImproved_ATP
                 UxJeepWranglerRadioButton.Checked = false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //WebView wv = new WebView();
+            //wv.NavigationCompleted += Wv_NavigationCompleted;
+            //wv.Navigate(new Uri(url));
+        }
     }
 }
