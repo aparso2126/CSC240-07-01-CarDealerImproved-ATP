@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSC240_06_03_CarDealer_ATP
+namespace CSC240_07_01_CarDealerImproved_ATP
 {
     public partial class CarSpecsForm : Form
     {

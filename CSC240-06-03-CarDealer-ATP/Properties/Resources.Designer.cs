@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSC240_06_03_CarDealer_ATP.Properties {
+namespace CSC240_07_01_CarDealerImproved_ATP.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace CSC240_06_03_CarDealer_ATP.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CSC240_06_03_CarDealer_ATP.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CSC240_07_01_CarDealerImproved_ATP.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

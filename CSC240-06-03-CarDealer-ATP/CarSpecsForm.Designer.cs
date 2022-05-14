@@ -1,4 +1,4 @@
-﻿namespace CSC240_06_03_CarDealer_ATP
+﻿namespace CSC240_07_01_CarDealerImproved_ATP
 {
     partial class CarSpecsForm
     {
