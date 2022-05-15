@@ -84,7 +84,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 242);
+            this.ClientSize = new System.Drawing.Size(220, 259);
             this.Controls.Add(this.UxRenegadeRadioButton);
             this.Controls.Add(this.UxCompassRadioButton);
             this.Controls.Add(this.UxJeepWranglerRadioButton);

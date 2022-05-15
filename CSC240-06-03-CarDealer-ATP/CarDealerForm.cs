@@ -1,4 +1,4 @@
-/**************************************
+ /**************************************
  * Name:        Austin Parsons
  * Date:        2022-05-07
  * Description: A program that displays information about
@@ -43,13 +43,6 @@ namespace CSC240_07_01_CarDealerImproved_ATP
                 carSpecsForm.ShowDialog();
                 UxJeepWranglerRadioButton.Checked = false;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //WebView wv = new WebView();
-            //wv.NavigationCompleted += Wv_NavigationCompleted;
-            //wv.Navigate(new Uri(url));
         }
     }
 }
