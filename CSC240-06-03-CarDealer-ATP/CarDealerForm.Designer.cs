@@ -29,70 +29,67 @@
         private void InitializeComponent()
         {
             this.UxJeepModelsLabel = new System.Windows.Forms.Label();
-            this.UxJeepWranglerRadioButton = new System.Windows.Forms.RadioButton();
-            this.UxCompassRadioButton = new System.Windows.Forms.RadioButton();
-            this.UxRenegadeRadioButton = new System.Windows.Forms.RadioButton();
+            this.jeepModelsComboBox = new System.Windows.Forms.ComboBox();
+            this.carPictureBox = new System.Windows.Forms.PictureBox();
+            this.viewSpecsButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // UxJeepModelsLabel
             // 
             this.UxJeepModelsLabel.AutoSize = true;
             this.UxJeepModelsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepModelsLabel.Location = new System.Drawing.Point(22, 24);
+            this.UxJeepModelsLabel.Location = new System.Drawing.Point(123, 25);
             this.UxJeepModelsLabel.Name = "UxJeepModelsLabel";
             this.UxJeepModelsLabel.Size = new System.Drawing.Size(171, 29);
             this.UxJeepModelsLabel.TabIndex = 1;
             this.UxJeepModelsLabel.Text = "Jeep Models:";
             // 
-            // UxJeepWranglerRadioButton
+            // jeepModelsComboBox
             // 
-            this.UxJeepWranglerRadioButton.AutoSize = true;
-            this.UxJeepWranglerRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepWranglerRadioButton.Location = new System.Drawing.Point(22, 155);
-            this.UxJeepWranglerRadioButton.Name = "UxJeepWranglerRadioButton";
-            this.UxJeepWranglerRadioButton.Size = new System.Drawing.Size(113, 29);
-            this.UxJeepWranglerRadioButton.TabIndex = 4;
-            this.UxJeepWranglerRadioButton.Text = "Wrangler";
-            this.UxJeepWranglerRadioButton.UseVisualStyleBackColor = true;
-            this.UxJeepWranglerRadioButton.CheckedChanged += new System.EventHandler(this.UxJeepWranglerRadioButton_CheckedChanged);
+            this.jeepModelsComboBox.FormattingEnabled = true;
+            this.jeepModelsComboBox.Location = new System.Drawing.Point(123, 74);
+            this.jeepModelsComboBox.MaxDropDownItems = 10;
+            this.jeepModelsComboBox.Name = "jeepModelsComboBox";
+            this.jeepModelsComboBox.Size = new System.Drawing.Size(220, 28);
+            this.jeepModelsComboBox.TabIndex = 2;
+            this.jeepModelsComboBox.SelectedIndexChanged += new System.EventHandler(this.jeepModelsComboBox_SelectedIndexChanged);
             // 
-            // UxCompassRadioButton
+            // carPictureBox
             // 
-            this.UxCompassRadioButton.AutoSize = true;
-            this.UxCompassRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UxCompassRadioButton.Location = new System.Drawing.Point(22, 67);
-            this.UxCompassRadioButton.Name = "UxCompassRadioButton";
-            this.UxCompassRadioButton.Size = new System.Drawing.Size(117, 29);
-            this.UxCompassRadioButton.TabIndex = 2;
-            this.UxCompassRadioButton.Text = "Compass";
-            this.UxCompassRadioButton.UseVisualStyleBackColor = true;
-            this.UxCompassRadioButton.CheckedChanged += new System.EventHandler(this.UxCompassRadioButton_CheckedChanged);
+            this.carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CF4B4F698D85C6FDAAC6AC2D0A0CC0" +
+    "EB75A63ABD5D74";
+            this.carPictureBox.Location = new System.Drawing.Point(22, 192);
+            this.carPictureBox.Name = "carPictureBox";
+            this.carPictureBox.Size = new System.Drawing.Size(427, 320);
+            this.carPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.carPictureBox.TabIndex = 3;
+            this.carPictureBox.TabStop = false;
             // 
-            // UxRenegadeRadioButton
+            // viewSpecsButton
             // 
-            this.UxRenegadeRadioButton.AutoSize = true;
-            this.UxRenegadeRadioButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UxRenegadeRadioButton.Location = new System.Drawing.Point(22, 111);
-            this.UxRenegadeRadioButton.Name = "UxRenegadeRadioButton";
-            this.UxRenegadeRadioButton.Size = new System.Drawing.Size(123, 29);
-            this.UxRenegadeRadioButton.TabIndex = 3;
-            this.UxRenegadeRadioButton.Text = "Renegade";
-            this.UxRenegadeRadioButton.UseVisualStyleBackColor = true;
-            this.UxRenegadeRadioButton.CheckedChanged += new System.EventHandler(this.UxRenegadeRadioButton_CheckedChanged);
+            this.viewSpecsButton.Location = new System.Drawing.Point(123, 108);
+            this.viewSpecsButton.Name = "viewSpecsButton";
+            this.viewSpecsButton.Size = new System.Drawing.Size(220, 33);
+            this.viewSpecsButton.TabIndex = 4;
+            this.viewSpecsButton.Text = "View Specs";
+            this.viewSpecsButton.UseVisualStyleBackColor = true;
             // 
             // CarDealerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 242);
-            this.Controls.Add(this.UxRenegadeRadioButton);
-            this.Controls.Add(this.UxCompassRadioButton);
-            this.Controls.Add(this.UxJeepWranglerRadioButton);
+            this.ClientSize = new System.Drawing.Size(467, 524);
+            this.Controls.Add(this.viewSpecsButton);
+            this.Controls.Add(this.carPictureBox);
+            this.Controls.Add(this.jeepModelsComboBox);
             this.Controls.Add(this.UxJeepModelsLabel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CarDealerForm";
             this.Text = "Car Dealer";
+            this.Load += new System.EventHandler(this.CarDealerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,8 +98,8 @@
         #endregion
 
         private Label UxJeepModelsLabel;
-        private RadioButton UxJeepWranglerRadioButton;
-        private RadioButton UxCompassRadioButton;
-        private RadioButton UxRenegadeRadioButton;
+        private ComboBox jeepModelsComboBox;
+        private PictureBox carPictureBox;
+        private Button viewSpecsButton;
     }
 }

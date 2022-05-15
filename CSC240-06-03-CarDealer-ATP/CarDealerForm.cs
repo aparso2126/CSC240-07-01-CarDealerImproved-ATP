@@ -1,8 +1,9 @@
+using System;
+using Supremes;
 /**************************************
  * Name:        Austin Parsons
- * Date:        2022-05-07
- * Description: A program that displays information about
- * different car models by using radio buttons
+ * Date:        2022-05-15
+ * Description: An improved version of CarDealer from last week
  * Assistance:
  *************************************/
 
@@ -15,41 +16,48 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             InitializeComponent();
         }
 
-        private void UxCompassRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void jeepModelsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (UxCompassRadioButton.Checked)
-            {
-                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep","Compass");
-                carSpecsForm.ShowDialog();
-                UxCompassRadioButton.Checked = false;
+            string currentIndex = jeepModelsComboBox.SelectedIndex.ToString();
+            var timeoutInMilliseconds = 5000;
+            var uri = new Uri("https://www.globalautomall.com/vehicles.cfm/make/jeep/");
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+            string modelURL = "https://www.globalautomall.com" + doc.GetElementsByClass("col-sm-9").ElementAt(Int32.Parse(currentIndex)).GetElementsByTag("a").ElementAt(0).Attr("href");
+
+            if (currentIndex == "4") {
+                carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CC4049698D85C6FDAAC6AC2D0A0CC0EB71D23ABD5D74";
+                return;
             }
+
+            carPictureBox.ImageLocation = getCarImage(modelURL);
         }
 
-        private void UxRenegadeRadioButton_CheckedChanged(object sender, EventArgs e)
+        private void CarDealerForm_Load(object sender, EventArgs e)
         {
-            if (UxRenegadeRadioButton.Checked)
+            var timeoutInMilliseconds = 5000;
+            var uri = new Uri("https://www.globalautomall.com/vehicles.cfm/make/jeep/");
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+
+            // <span itemprop="ratingValue">86</span>
+            var modelCount = doc.GetElementsByClass("col-sm-9").Count;
+
+            for (int i = 0; i < modelCount; i += 1)
             {
-                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep", "Renegade");
-                carSpecsForm.ShowDialog();
-                UxRenegadeRadioButton.Checked = false;
+                string modelStr = doc.GetElementsByClass("col-sm-9").ElementAt(i).GetElementsByClass("notranslate").ElementAt(0).Text.Substring(5);
+                jeepModelsComboBox.Items.Add(modelStr);
             }
+            jeepModelsComboBox.SelectedIndex = 0;
         }
 
-        private void UxJeepWranglerRadioButton_CheckedChanged(object sender, EventArgs e)
+        private static string getCarImage(string URL)
         {
-            if (UxJeepWranglerRadioButton.Checked)
-            {
-                CarSpecsForm carSpecsForm = new CarSpecsForm("Jeep", "Wrangler");
-                carSpecsForm.ShowDialog();
-                UxJeepWranglerRadioButton.Checked = false;
-            }
-        }
+            var timeoutInMilliseconds = 5000;
+            var uri = new Uri(URL);
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //WebView wv = new WebView();
-            //wv.NavigationCompleted += Wv_NavigationCompleted;
-            //wv.Navigate(new Uri(url));
+            int imageIndex = doc.GetElementsByClass("row").ElementAt(1).GetElementsByClass("col-sm-3").Count()-1;
+            string imageSrc = doc.GetElementsByClass("row").ElementAt(1).GetElementsByClass("col-sm-3").ElementAt(imageIndex).GetElementsByTag("img").ElementAt(0).Attr("data-src");
+            return imageSrc;
         }
     }
 }
