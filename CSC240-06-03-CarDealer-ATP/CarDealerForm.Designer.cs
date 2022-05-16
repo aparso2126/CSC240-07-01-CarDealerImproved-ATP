@@ -43,7 +43,7 @@
             // 
             this.UxJeepModelsLabel.AutoSize = true;
             this.UxJeepModelsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepModelsLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxJeepModelsLabel.ForeColor = System.Drawing.Color.Red;
             this.UxJeepModelsLabel.Location = new System.Drawing.Point(23, 22);
             this.UxJeepModelsLabel.Name = "UxJeepModelsLabel";
             this.UxJeepModelsLabel.Size = new System.Drawing.Size(158, 29);
@@ -52,6 +52,9 @@
             // 
             // UxJeepModelsComboBox
             // 
+            this.UxJeepModelsComboBox.BackColor = System.Drawing.Color.Black;
+            this.UxJeepModelsComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxJeepModelsComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UxJeepModelsComboBox.FormattingEnabled = true;
             this.UxJeepModelsComboBox.Location = new System.Drawing.Point(23, 54);
             this.UxJeepModelsComboBox.MaxDropDownItems = 10;
@@ -75,6 +78,9 @@
             // 
             // UxJeepTrimComboBox
             // 
+            this.UxJeepTrimComboBox.BackColor = System.Drawing.Color.Black;
+            this.UxJeepTrimComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxJeepTrimComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UxJeepTrimComboBox.FormattingEnabled = true;
             this.UxJeepTrimComboBox.Location = new System.Drawing.Point(24, 198);
             this.UxJeepTrimComboBox.MaxDropDownItems = 10;
@@ -86,7 +92,7 @@
             // 
             this.UxModelTrimLabel.AutoSize = true;
             this.UxModelTrimLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxModelTrimLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxModelTrimLabel.ForeColor = System.Drawing.Color.Red;
             this.UxModelTrimLabel.Location = new System.Drawing.Point(24, 166);
             this.UxModelTrimLabel.Name = "UxModelTrimLabel";
             this.UxModelTrimLabel.Size = new System.Drawing.Size(139, 29);
@@ -95,6 +101,9 @@
             // 
             // UxJeepYearComboBox
             // 
+            this.UxJeepYearComboBox.BackColor = System.Drawing.Color.Black;
+            this.UxJeepYearComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxJeepYearComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UxJeepYearComboBox.FormattingEnabled = true;
             this.UxJeepYearComboBox.Items.AddRange(new object[] {
             "2022",
@@ -111,7 +120,7 @@
             // 
             this.UxJeepYearLabel.AutoSize = true;
             this.UxJeepYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepYearLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxJeepYearLabel.ForeColor = System.Drawing.Color.Red;
             this.UxJeepYearLabel.Location = new System.Drawing.Point(23, 94);
             this.UxJeepYearLabel.Name = "UxJeepYearLabel";
             this.UxJeepYearLabel.Size = new System.Drawing.Size(140, 29);
