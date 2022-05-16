@@ -59,5 +59,25 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             string imageSrc = doc.GetElementsByClass("row").ElementAt(1).GetElementsByClass("col-sm-3").ElementAt(imageIndex).GetElementsByTag("img").ElementAt(0).Attr("data-src");
             return imageSrc;
         }
+
+
+        private void UxViewSpecsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UxModelTrimComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string currentIndex = jeepModelsComboBox.SelectedIndex.ToString();
+            var timeoutInMilliseconds = 5000;
+            var uri = new Uri("https://www.globalautomall.com/vehicles.cfm/make/jeep/");
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+            string modelURL = "https://www.globalautomall.com" + doc.GetElementsByClass("col-sm-9").ElementAt(Int32.Parse(currentIndex)).GetElementsByTag("a").ElementAt(0).Attr("href");
+
+            var uri2 = new Uri(modelURL);
+            var doc2 = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+
+
+        }
     }
 }
