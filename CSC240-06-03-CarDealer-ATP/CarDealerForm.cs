@@ -11,6 +11,8 @@ namespace CSC240_07_01_CarDealerImproved_ATP
 {
     public partial class CarDealerForm : Form
     {
+        public int timeoutInMilliseconds = 5000;
+        public string modelURL = "";
         public CarDealerForm()
         {
             InitializeComponent();
@@ -19,10 +21,9 @@ namespace CSC240_07_01_CarDealerImproved_ATP
         private void jeepModelsComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             string currentIndex = UxJeepModelsComboBox.SelectedIndex.ToString();
-            var timeoutInMilliseconds = 5000;
             var uri = new Uri("https://www.globalautomall.com/vehicles.cfm/make/jeep/");
             var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
-            string modelURL = "https://www.globalautomall.com" + doc.GetElementsByClass("col-sm-9").ElementAt(Int32.Parse(currentIndex)).GetElementsByTag("a").ElementAt(0).Attr("href");
+            modelURL = "https://www.globalautomall.com" + doc.GetElementsByClass("col-sm-9").ElementAt(Int32.Parse(currentIndex)).GetElementsByTag("a").ElementAt(0).Attr("href");
 
             if (currentIndex == "4") {
                 carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CC4049698D85C6FDAAC6AC2D0A0CC0EB71D23ABD5D74";
@@ -59,7 +60,6 @@ namespace CSC240_07_01_CarDealerImproved_ATP
 
         private void CarDealerForm_Load(object sender, EventArgs e)
         {
-            var timeoutInMilliseconds = 5000;
             var uri = new Uri("https://www.globalautomall.com/vehicles.cfm/make/jeep/");
             var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
 
@@ -74,9 +74,8 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             UxJeepModelsComboBox.SelectedIndex = 0;
         }
 
-        private static string getCarImage(string URL)
+        private string getCarImage(string URL)
         {
-            var timeoutInMilliseconds = 5000;
             var uri = new Uri(URL);
             var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
 
@@ -87,7 +86,11 @@ namespace CSC240_07_01_CarDealerImproved_ATP
 
         private void UxViewSpecsButton_Click_1(object sender, EventArgs e)
         {
-            CarSpecsForm carSpecsForm = new CarSpecsForm("https://www.globalautomall.com/vehicles.cfm/make/jeep/model/cherokee/year/2021/level/400912497/");
+            var uri = new Uri(modelURL);
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+            string trimURL = "https://www.globalautomall.com" + doc.GetElementsByClass("col-sm-9").ElementAt(UxJeepYearComboBox.SelectedIndex).GetElementsByClass("list-group").ElementAt(0).GetElementsByClass("list-group-item").ElementAt(UxJeepTrimComboBox.SelectedIndex).Attr("href");
+
+            CarSpecsForm carSpecsForm = new CarSpecsForm(trimURL);
             carSpecsForm.ShowDialog();
         }
     }

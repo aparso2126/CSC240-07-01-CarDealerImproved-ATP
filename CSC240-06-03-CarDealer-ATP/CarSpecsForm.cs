@@ -13,7 +13,7 @@ namespace CSC240_07_01_CarDealerImproved_ATP
 {
     public partial class CarSpecsForm : Form
     {
-        string URL = "https://www.globalautomall.com/vehicles.cfm/make/jeep/model/grand-cherokee-wk/year/2022/level/400919328/";
+        string URL = "";
         public CarSpecsForm(String URL)
         {
             InitializeComponent();
