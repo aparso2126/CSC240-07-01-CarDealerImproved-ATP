@@ -101,6 +101,7 @@
             this.UxJeepYearComboBox.Name = "UxJeepYearComboBox";
             this.UxJeepYearComboBox.Size = new System.Drawing.Size(321, 28);
             this.UxJeepYearComboBox.TabIndex = 8;
+            this.UxJeepYearComboBox.SelectedIndexChanged += new System.EventHandler(this.UxJeepYearComboBox_SelectedIndexChanged);
             // 
             // UxJeepYearLabel
             // 

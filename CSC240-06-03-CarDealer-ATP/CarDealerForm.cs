@@ -93,5 +93,20 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             CarSpecsForm carSpecsForm = new CarSpecsForm(trimURL);
             carSpecsForm.ShowDialog();
         }
+
+        private void UxJeepYearComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UxJeepTrimComboBox.Items.Clear();
+            var uri = new Uri(modelURL);
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+            int trimOptionsCount = doc.GetElementsByClass("col-sm-9").ElementAt(UxJeepYearComboBox.SelectedIndex).GetElementsByClass("list-group").ElementAt(0).GetElementsByClass("list-group-item").Count;
+
+            for (int i = 0; i < trimOptionsCount; i++)
+            {
+                string trimOption = doc.GetElementsByClass("col-sm-9").ElementAt(UxJeepYearComboBox.SelectedIndex).GetElementsByClass("list-group").ElementAt(0).GetElementsByClass("list-group-item").ElementAt(i).GetElementsByClass("sTrim").ElementAt(0).Text;
+                UxJeepTrimComboBox.Items.Add(trimOption.Substring(trimOption.IndexOf(UxJeepModelsComboBox.Text) + UxJeepModelsComboBox.Text.Length + 1));
+            }
+            UxJeepTrimComboBox.SelectedIndex = 0;
+        }
     }
 }
