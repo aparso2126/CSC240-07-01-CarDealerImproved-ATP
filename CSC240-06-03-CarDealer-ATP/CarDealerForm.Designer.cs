@@ -29,9 +29,13 @@
         private void InitializeComponent()
         {
             this.UxJeepModelsLabel = new System.Windows.Forms.Label();
-            this.jeepModelsComboBox = new System.Windows.Forms.ComboBox();
+            this.UxJeepModelsComboBox = new System.Windows.Forms.ComboBox();
             this.carPictureBox = new System.Windows.Forms.PictureBox();
-            this.viewSpecsButton = new System.Windows.Forms.Button();
+            this.UxViewSpecsButton = new System.Windows.Forms.Button();
+            this.UxJeepTrimComboBox = new System.Windows.Forms.ComboBox();
+            this.UxModelTrimLabel = new System.Windows.Forms.Label();
+            this.UxJeepYearComboBox = new System.Windows.Forms.ComboBox();
+            this.UxJeepYearLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.carPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,50 +43,97 @@
             // 
             this.UxJeepModelsLabel.AutoSize = true;
             this.UxJeepModelsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepModelsLabel.Location = new System.Drawing.Point(123, 25);
+            this.UxJeepModelsLabel.Location = new System.Drawing.Point(21, 12);
             this.UxJeepModelsLabel.Name = "UxJeepModelsLabel";
-            this.UxJeepModelsLabel.Size = new System.Drawing.Size(171, 29);
+            this.UxJeepModelsLabel.Size = new System.Drawing.Size(158, 29);
             this.UxJeepModelsLabel.TabIndex = 1;
-            this.UxJeepModelsLabel.Text = "Jeep Models:";
+            this.UxJeepModelsLabel.Text = "Jeep Model:";
             // 
-            // jeepModelsComboBox
+            // UxJeepModelsComboBox
             // 
-            this.jeepModelsComboBox.FormattingEnabled = true;
-            this.jeepModelsComboBox.Location = new System.Drawing.Point(123, 74);
-            this.jeepModelsComboBox.MaxDropDownItems = 10;
-            this.jeepModelsComboBox.Name = "jeepModelsComboBox";
-            this.jeepModelsComboBox.Size = new System.Drawing.Size(220, 28);
-            this.jeepModelsComboBox.TabIndex = 2;
-            this.jeepModelsComboBox.SelectedIndexChanged += new System.EventHandler(this.jeepModelsComboBox_SelectedIndexChanged);
+            this.UxJeepModelsComboBox.FormattingEnabled = true;
+            this.UxJeepModelsComboBox.Location = new System.Drawing.Point(21, 53);
+            this.UxJeepModelsComboBox.MaxDropDownItems = 10;
+            this.UxJeepModelsComboBox.Name = "UxJeepModelsComboBox";
+            this.UxJeepModelsComboBox.Size = new System.Drawing.Size(321, 28);
+            this.UxJeepModelsComboBox.TabIndex = 2;
+            this.UxJeepModelsComboBox.SelectedIndexChanged += new System.EventHandler(this.jeepModelsComboBox_SelectedIndexChanged);
             // 
             // carPictureBox
             // 
             this.carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CF4B4F698D85C6FDAAC6AC2D0A0CC0" +
     "EB75A63ABD5D74";
-            this.carPictureBox.Location = new System.Drawing.Point(22, 192);
+            this.carPictureBox.Location = new System.Drawing.Point(363, 12);
             this.carPictureBox.Name = "carPictureBox";
             this.carPictureBox.Size = new System.Drawing.Size(427, 320);
             this.carPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.carPictureBox.TabIndex = 3;
             this.carPictureBox.TabStop = false;
             // 
-            // viewSpecsButton
+            // UxViewSpecsButton
             // 
-            this.viewSpecsButton.Location = new System.Drawing.Point(123, 108);
-            this.viewSpecsButton.Name = "viewSpecsButton";
-            this.viewSpecsButton.Size = new System.Drawing.Size(220, 33);
-            this.viewSpecsButton.TabIndex = 4;
-            this.viewSpecsButton.Text = "View Specs";
-            this.viewSpecsButton.UseVisualStyleBackColor = true;
+            this.UxViewSpecsButton.Location = new System.Drawing.Point(22, 299);
+            this.UxViewSpecsButton.Name = "UxViewSpecsButton";
+            this.UxViewSpecsButton.Size = new System.Drawing.Size(321, 33);
+            this.UxViewSpecsButton.TabIndex = 4;
+            this.UxViewSpecsButton.Text = "View Specs";
+            this.UxViewSpecsButton.UseVisualStyleBackColor = true;
+            this.UxViewSpecsButton.Click += new System.EventHandler(this.UxViewSpecsButton_Click);
+            // 
+            // UxJeepTrimComboBox
+            // 
+            this.UxJeepTrimComboBox.FormattingEnabled = true;
+            this.UxJeepTrimComboBox.Location = new System.Drawing.Point(22, 229);
+            this.UxJeepTrimComboBox.MaxDropDownItems = 10;
+            this.UxJeepTrimComboBox.Name = "UxJeepTrimComboBox";
+            this.UxJeepTrimComboBox.Size = new System.Drawing.Size(321, 28);
+            this.UxJeepTrimComboBox.TabIndex = 6;
+            // 
+            // UxModelTrimLabel
+            // 
+            this.UxModelTrimLabel.AutoSize = true;
+            this.UxModelTrimLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxModelTrimLabel.Location = new System.Drawing.Point(22, 188);
+            this.UxModelTrimLabel.Name = "UxModelTrimLabel";
+            this.UxModelTrimLabel.Size = new System.Drawing.Size(139, 29);
+            this.UxModelTrimLabel.TabIndex = 5;
+            this.UxModelTrimLabel.Text = "Jeep Trim:";
+            // 
+            // UxJeepYearComboBox
+            // 
+            this.UxJeepYearComboBox.FormattingEnabled = true;
+            this.UxJeepYearComboBox.Items.AddRange(new object[] {
+            "2022",
+            "2021",
+            "2020"});
+            this.UxJeepYearComboBox.Location = new System.Drawing.Point(21, 140);
+            this.UxJeepYearComboBox.MaxDropDownItems = 10;
+            this.UxJeepYearComboBox.Name = "UxJeepYearComboBox";
+            this.UxJeepYearComboBox.Size = new System.Drawing.Size(321, 28);
+            this.UxJeepYearComboBox.TabIndex = 8;
+            // 
+            // UxJeepYearLabel
+            // 
+            this.UxJeepYearLabel.AutoSize = true;
+            this.UxJeepYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxJeepYearLabel.Location = new System.Drawing.Point(21, 99);
+            this.UxJeepYearLabel.Name = "UxJeepYearLabel";
+            this.UxJeepYearLabel.Size = new System.Drawing.Size(140, 29);
+            this.UxJeepYearLabel.TabIndex = 7;
+            this.UxJeepYearLabel.Text = "Jeep Year:";
             // 
             // CarDealerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(467, 524);
-            this.Controls.Add(this.viewSpecsButton);
+            this.ClientSize = new System.Drawing.Size(802, 352);
+            this.Controls.Add(this.UxJeepYearComboBox);
+            this.Controls.Add(this.UxJeepYearLabel);
+            this.Controls.Add(this.UxJeepTrimComboBox);
+            this.Controls.Add(this.UxModelTrimLabel);
+            this.Controls.Add(this.UxViewSpecsButton);
             this.Controls.Add(this.carPictureBox);
-            this.Controls.Add(this.jeepModelsComboBox);
+            this.Controls.Add(this.UxJeepModelsComboBox);
             this.Controls.Add(this.UxJeepModelsLabel);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -98,8 +149,12 @@
         #endregion
 
         private Label UxJeepModelsLabel;
-        private ComboBox jeepModelsComboBox;
+        private ComboBox UxJeepModelsComboBox;
         private PictureBox carPictureBox;
-        private Button viewSpecsButton;
+        private Button UxViewSpecsButton;
+        private ComboBox UxJeepTrimComboBox;
+        private Label UxModelTrimLabel;
+        private ComboBox UxJeepYearComboBox;
+        private Label UxJeepYearLabel;
     }
 }
