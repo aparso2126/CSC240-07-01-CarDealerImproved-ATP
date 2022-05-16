@@ -4,7 +4,8 @@ using Supremes;
  * Name:        Austin Parsons
  * Date:        2022-05-15
  * Description: An improved version of CarDealer from last week
- * Assistance:
+ * Assistance:  https://matarillo.github.io/dcsoup/api/Supremes.Dcsoup.html
+ *              https://www.globalautomall.com/vehicles.cfm/make/jeep/
  *************************************/
 
 namespace CSC240_07_01_CarDealerImproved_ATP
