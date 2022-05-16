@@ -43,8 +43,9 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             string mpgHwy = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(2).Text;
             UxSpecsLabel.Text += mpgCity + "\n\n" + mpgHwy;
 
+            UxSpecsLabel.Location = new Point(UxSpecTitleLabel.Location.X + UxSpecTitleLabel.Size.Width + 20,UxSpecsLabel.Location.Y);
             this.Height = UxSpecTitleLabel.Size.Height + 80;
-            this.Width = UxSpecsLabel.Location.X + UxSpecsLabel.Size.Width + 50;
+            this.Width = UxSpecsLabel.Location.X + UxSpecsLabel.Size.Width + 30;
         }
     }
 }

@@ -61,6 +61,7 @@
             // 
             // carPictureBox
             // 
+            this.carPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CF4B4F698D85C6FDAAC6AC2D0A0CC0" +
     "EB75A63ABD5D74";
             this.carPictureBox.Location = new System.Drawing.Point(363, 12);
