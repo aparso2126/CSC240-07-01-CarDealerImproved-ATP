@@ -13,7 +13,7 @@ namespace CSC240_07_01_CarDealerImproved_ATP
 {
     public partial class CarSpecsForm : Form
     {
-        string URL = "";
+        public string URL = "";
         public CarSpecsForm(String URL)
         {
             InitializeComponent();
