@@ -7,55 +7,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Supremes;
 
 namespace CSC240_07_01_CarDealerImproved_ATP
 {
     public partial class CarSpecsForm : Form
     {
-        string make = "";
-        string model = "";
-        public CarSpecsForm(String make, String model)
+        string URL = "";
+        public CarSpecsForm(String URL)
         {
             InitializeComponent();
-            this.model = model;
-            this.make = make;
+            this.URL = URL;
         }
 
         private void CarSpecsForm_Load(object sender, EventArgs e)
         {
-            if (make == "Jeep")
+            var timeoutInMilliseconds = 5000;
+            var uri = new Uri(URL);
+            var doc = Supremes.Dcsoup.Parse(uri, timeoutInMilliseconds);
+            int specsCount = doc.GetElementsByClass("col-sm-5").ElementAt(1).GetElementsByClass("table").ElementAt(0).GetElementsByTag("tr").Count;
+
+            for (int i = 0; i < specsCount; i++)
             {
-                if (model == "Compass")
-                {
-                    UxModelPictureBox.ImageLocation = "https://www.jeep.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVk3GBfM9IW2VRkr72kVTd9pVNwXGXQpMTV1rUp3g6OQCckPquBhS1U%25jzbTllxA0n2Cl%250QFmwFDkpd2rTBoM&&pov=fronthero&width=1000&height=460&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=";
-                    UxMakeLabel.Text = make;
-                    UxModelLabel.Text = model;
-                    UxMSRPLabel.Text = "$26,390";
-                    UxFuelTypeLabel.Text = "Regular Unleaded";
-                    UxFuelTankLabel.Text = "13.5 gal";
-                    UxFuelEconLabel.Text = "25 mpg";
-                }
-                if (model == "Renegade")
-                {
-                    UxModelPictureBox.ImageLocation = "https://www.jeep.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVk3GBfM9IW2VRkr72kVTd9pMXwXGXQpMTV1rUp6g6OQCckPquBhS1U%25jzbTllxA01BCl%250QFmwFDkpd2ATBoM&&pov=fronthero&width=1000&height=460&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=";
-                    UxMakeLabel.Text = make;
-                    UxModelLabel.Text = model;
-                    UxMSRPLabel.Text = "$24,195";
-                    UxFuelTypeLabel.Text = "Premium Unleaded";
-                    UxFuelTankLabel.Text = "12.7 gal";
-                    UxFuelEconLabel.Text = "27 mpg";
-                }
-                if (model == "Wrangler")
-                {
-                    UxModelPictureBox.ImageLocation = "https://www.jeep.com/mediaserver/iris?COSY-EU-100-1713uLDEMTV1r9s%25WBXaBKFmfKSLC9gIQALMc6UhVk3GBfM9IW2VRkr72kVTd9pQswXGXQpMTV1rUp3g6OQCckPquBhS1U%25jzbTllxA0uvLl%250QFmwpikpd2LCBoM&&pov=fronthero&width=1000&height=460&bkgnd=white&resp=jpg&cut=&x=&y=&w=&h=";
-                    UxMakeLabel.Text = make;
-                    UxModelLabel.Text = model;
-                    UxMSRPLabel.Text = "$33,595";
-                    UxFuelTypeLabel.Text = "Regular Unleaded";
-                    UxFuelTankLabel.Text = "21.5 gal";
-                    UxFuelEconLabel.Text = "19 mpg";
-                }
+                string specTitle = doc.GetElementsByClass("col-sm-5").ElementAt(1).GetElementsByClass("table").ElementAt(0).GetElementsByTag("tr").ElementAt(i).GetElementsByTag("td").ElementAt(0).Text;
+                UxSpecTitleLabel.Text += specTitle + ":\n\n";
             }
+            UxSpecTitleLabel.Text += "MPG City:\n\nMPG Hwy:";
+
+            for (int i = 0; i < specsCount; i++)
+            {
+                string specValue = doc.GetElementsByClass("col-sm-5").ElementAt(1).GetElementsByClass("table").ElementAt(0).GetElementsByTag("tr").ElementAt(i).GetElementsByTag("td").ElementAt(1).Text;
+                UxSpecsLabel.Text += specValue + "\n\n";
+            }
+            string mpgCity = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(0).Text;
+            string mpgHwy = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(2).Text;
+            UxSpecsLabel.Text += mpgCity + "\n\n" + mpgHwy;
+
+            UxSpecsLabel.Location = new Point(UxSpecTitleLabel.Location.X + UxSpecTitleLabel.Size.Width + 20,UxSpecsLabel.Location.Y);
+            this.Height = UxSpecTitleLabel.Size.Height + 80;
+            this.Width = UxSpecsLabel.Location.X + UxSpecsLabel.Size.Width + 30;
         }
     }
 }
