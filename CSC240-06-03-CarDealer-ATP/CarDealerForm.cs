@@ -85,10 +85,10 @@ namespace CSC240_07_01_CarDealerImproved_ATP
             return imageSrc;
         }
 
-
-        private void UxViewSpecsButton_Click(object sender, EventArgs e)
+        private void UxViewSpecsButton_Click_1(object sender, EventArgs e)
         {
-
+            CarSpecsForm carSpecsForm = new CarSpecsForm("https://www.globalautomall.com/vehicles.cfm/make/jeep/model/cherokee/year/2021/level/400912497/");
+            carSpecsForm.ShowDialog();
         }
     }
 }
