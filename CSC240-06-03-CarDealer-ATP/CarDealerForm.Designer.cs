@@ -43,7 +43,8 @@
             // 
             this.UxJeepModelsLabel.AutoSize = true;
             this.UxJeepModelsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepModelsLabel.Location = new System.Drawing.Point(24, 12);
+            this.UxJeepModelsLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxJeepModelsLabel.Location = new System.Drawing.Point(23, 22);
             this.UxJeepModelsLabel.Name = "UxJeepModelsLabel";
             this.UxJeepModelsLabel.Size = new System.Drawing.Size(158, 29);
             this.UxJeepModelsLabel.TabIndex = 1;
@@ -52,7 +53,7 @@
             // UxJeepModelsComboBox
             // 
             this.UxJeepModelsComboBox.FormattingEnabled = true;
-            this.UxJeepModelsComboBox.Location = new System.Drawing.Point(24, 44);
+            this.UxJeepModelsComboBox.Location = new System.Drawing.Point(23, 54);
             this.UxJeepModelsComboBox.MaxDropDownItems = 10;
             this.UxJeepModelsComboBox.Name = "UxJeepModelsComboBox";
             this.UxJeepModelsComboBox.Size = new System.Drawing.Size(321, 28);
@@ -61,6 +62,7 @@
             // 
             // carPictureBox
             // 
+            this.carPictureBox.BackColor = System.Drawing.Color.White;
             this.carPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.carPictureBox.ImageLocation = "https://media.motorfuse.com/img.cfm/type/2/img/0E16CF4B4F698D85C6FDAAC6AC2D0A0CC0" +
     "EB75A63ABD5D74";
@@ -74,7 +76,7 @@
             // UxJeepTrimComboBox
             // 
             this.UxJeepTrimComboBox.FormattingEnabled = true;
-            this.UxJeepTrimComboBox.Location = new System.Drawing.Point(25, 188);
+            this.UxJeepTrimComboBox.Location = new System.Drawing.Point(24, 198);
             this.UxJeepTrimComboBox.MaxDropDownItems = 10;
             this.UxJeepTrimComboBox.Name = "UxJeepTrimComboBox";
             this.UxJeepTrimComboBox.Size = new System.Drawing.Size(321, 28);
@@ -84,7 +86,8 @@
             // 
             this.UxModelTrimLabel.AutoSize = true;
             this.UxModelTrimLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxModelTrimLabel.Location = new System.Drawing.Point(25, 156);
+            this.UxModelTrimLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxModelTrimLabel.Location = new System.Drawing.Point(24, 166);
             this.UxModelTrimLabel.Name = "UxModelTrimLabel";
             this.UxModelTrimLabel.Size = new System.Drawing.Size(139, 29);
             this.UxModelTrimLabel.TabIndex = 5;
@@ -97,7 +100,7 @@
             "2022",
             "2021",
             "2020"});
-            this.UxJeepYearComboBox.Location = new System.Drawing.Point(24, 116);
+            this.UxJeepYearComboBox.Location = new System.Drawing.Point(23, 126);
             this.UxJeepYearComboBox.MaxDropDownItems = 10;
             this.UxJeepYearComboBox.Name = "UxJeepYearComboBox";
             this.UxJeepYearComboBox.Size = new System.Drawing.Size(321, 28);
@@ -108,7 +111,8 @@
             // 
             this.UxJeepYearLabel.AutoSize = true;
             this.UxJeepYearLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxJeepYearLabel.Location = new System.Drawing.Point(24, 84);
+            this.UxJeepYearLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxJeepYearLabel.Location = new System.Drawing.Point(23, 94);
             this.UxJeepYearLabel.Name = "UxJeepYearLabel";
             this.UxJeepYearLabel.Size = new System.Drawing.Size(140, 29);
             this.UxJeepYearLabel.TabIndex = 7;
@@ -116,19 +120,22 @@
             // 
             // UxViewSpecsButton
             // 
-            this.UxViewSpecsButton.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxViewSpecsButton.BackColor = System.Drawing.Color.Black;
+            this.UxViewSpecsButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UxViewSpecsButton.ForeColor = System.Drawing.Color.Red;
             this.UxViewSpecsButton.Location = new System.Drawing.Point(23, 277);
             this.UxViewSpecsButton.Name = "UxViewSpecsButton";
             this.UxViewSpecsButton.Size = new System.Drawing.Size(322, 57);
             this.UxViewSpecsButton.TabIndex = 9;
             this.UxViewSpecsButton.Text = "View Specs";
-            this.UxViewSpecsButton.UseVisualStyleBackColor = true;
+            this.UxViewSpecsButton.UseVisualStyleBackColor = false;
             this.UxViewSpecsButton.Click += new System.EventHandler(this.UxViewSpecsButton_Click_1);
             // 
             // CarDealerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(802, 351);
             this.Controls.Add(this.UxViewSpecsButton);
             this.Controls.Add(this.UxJeepYearComboBox);
