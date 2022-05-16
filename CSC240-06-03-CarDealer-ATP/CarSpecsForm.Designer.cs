@@ -36,7 +36,7 @@
             // 
             this.UxSpecTitleLabel.AutoSize = true;
             this.UxSpecTitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UxSpecTitleLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxSpecTitleLabel.ForeColor = System.Drawing.Color.Red;
             this.UxSpecTitleLabel.Location = new System.Drawing.Point(12, 12);
             this.UxSpecTitleLabel.Name = "UxSpecTitleLabel";
             this.UxSpecTitleLabel.Size = new System.Drawing.Size(0, 29);
@@ -46,7 +46,7 @@
             // 
             this.UxSpecsLabel.AutoSize = true;
             this.UxSpecsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UxSpecsLabel.ForeColor = System.Drawing.Color.Lime;
+            this.UxSpecsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.UxSpecsLabel.Location = new System.Drawing.Point(300, 12);
             this.UxSpecsLabel.Name = "UxSpecsLabel";
             this.UxSpecsLabel.Size = new System.Drawing.Size(0, 29);
