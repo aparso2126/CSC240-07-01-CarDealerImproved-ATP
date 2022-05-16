@@ -59,6 +59,7 @@
             this.Controls.Add(this.UxSpecTitleLabel);
             this.Name = "CarSpecsForm";
             this.Text = "Car Specifications";
+            this.Load += new System.EventHandler(this.CarSpecsForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
