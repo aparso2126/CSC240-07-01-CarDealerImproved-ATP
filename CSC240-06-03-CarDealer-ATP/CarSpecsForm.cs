@@ -39,10 +39,13 @@ namespace CSC240_07_01_CarDealerImproved_ATP
                 string specValue = doc.GetElementsByClass("col-sm-5").ElementAt(1).GetElementsByClass("table").ElementAt(0).GetElementsByTag("tr").ElementAt(i).GetElementsByTag("td").ElementAt(1).Text;
                 UxSpecsLabel.Text += specValue + "\n\n";
             }
-            string mpgCity = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(0).Text;
-            string mpgHwy = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(2).Text;
-            UxSpecsLabel.Text += mpgCity + "\n\n" + mpgHwy;
-
+            try
+            {
+                string mpgCity = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(0).Text;
+                string mpgHwy = doc.GetElementsByClass("well").ElementAt(0).GetElementsByTag("tr").ElementAt(0).GetElementsByTag("td").ElementAt(2).Text;
+                UxSpecsLabel.Text += mpgCity + "\n\n" + mpgHwy;
+            }
+            catch { }
             UxSpecsLabel.Location = new Point(UxSpecTitleLabel.Location.X + UxSpecTitleLabel.Size.Width + 20,UxSpecsLabel.Location.Y);
             this.Height = UxSpecTitleLabel.Size.Height + 80;
             this.Width = UxSpecsLabel.Location.X + UxSpecsLabel.Size.Width + 30;
